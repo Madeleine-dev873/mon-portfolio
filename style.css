@@ -1,0 +1,520 @@
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #0f2a4d;
+  background: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #004080, #1e90ff);
+  color: #fff;
+  border-bottom: 3px solid #003366;
+}
+
+header img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+header .info h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+header .info p {
+  margin: 0.3rem 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+nav {
+  background: #003366;
+  margin: 1rem 0 0 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+nav a:hover {
+  background: #1e90ff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+nav a[href*="index.html"]:not(:hover),
+nav a[href*="cv.html"]:not(:hover),
+nav a[href*="contact.html"]:not(:hover),
+nav a[href*="sceance2.html"]:not(:hover) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+main {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+  display: block;
+  margin: 1rem auto;
+}
+
+
+header img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #fff;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background: #004080;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+tbody tr:nth-child(even) {
+  background: #f1f5fb;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #004080;
+}
+
+aside {
+  background: #f0f6ff;
+  border-left: 4px solid #004080;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+aside h2 {
+  color: #004080;
+  border-bottom: 2px solid #004080;
+  padding-bottom: 0.4rem;
+  margin-top: 0;
+}
+
+
+form {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 4rem;
+  border-radius: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 64, 128, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 64, 128, 0.2);
+}
+
+.form-group {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #004080;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.8rem;
+  margin-bottom: 0;
+  font: inherit;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  line-height: 1.5;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.15);
+  background: #f8fbff;
+  transform: translateY(-2px);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 200px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+
+input:required, textarea:required {
+  border-left: 6px solid #ff6b6b;
+}
+
+input:valid, textarea:valid {
+  border-left: 6px solid #51cf66;
+}
+
+button, input[type="submit"] {
+  background: linear-gradient(135deg, #004080, #1e90ff);
+  color: #fff;
+  border: none;
+  padding: 1.5rem 3rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  width: auto;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 300px;
+  box-shadow: 0 6px 15px rgba(0, 64, 128, 0.3);
+}
+
+button:hover, input[type="submit"]:hover {
+  background: linear-gradient(135deg, #003366, #0066cc);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 64, 128, 0.4);
+}
+
+
+button:active, input[type="submit"]:active {
+  transform: translateY(-1px);
+}
+
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.contact-method {
+  background: #f8f9fa;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-method h3 {
+  color: #004080;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.contact-method p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact-method a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.8rem 1.5rem;
+  background: #004080;
+  color: white;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-method a:hover {
+  background: #1e90ff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+
+section {
+  margin: 2rem 0;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+a {
+  color: #004080;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1e90ff;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1200px) {
+  main {
+    max-width: 95%;
+    padding: 2rem;
+  }
+  
+  form {
+    padding: 3rem;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  header img {
+    margin-bottom: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  nav a {
+    padding: 1rem;
+  }
+  
+  main {
+    padding: 1.5rem;
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+  
+  header .info h1 {
+    font-size: 1.8rem;
+  }
+  
+  form {
+    padding: 2rem;
+    margin: 0;
+    max-width: 100%;
+    border-radius: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 2rem;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  input, textarea, select {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 0.6rem;
+  }
+  
+  textarea {
+    min-height: 150px;
+  }
+  
+  button, input[type="submit"] {
+    padding: 1.2rem 2rem;
+    font-size: 1.2rem;
+    width: 100%;
+    min-width: auto;
+    border-radius: 0.6rem;
+  }
+  
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  .contact-method {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  input, textarea, select {
+    padding: 1rem;
+  }
+  
+  button, input[type="submit"] {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+
+footer {
+  text-align: center;
+  background: #004080;
+  color: #fff;
+  padding: 2rem;
+  font-size: 1.1rem;
+  margin-top: auto;
+  border-top: 3px solid #003366;
+}
+
+footer a {
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+
+.welcome {
+  text-align: center;
+  padding: 3rem;
+}
+
+.welcome h2 {
+  color: #004080;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+
+.card {
+  background: white;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+
+.tech-badge {
+  display: inline-block;
+  background: #e2e8f0;
+  color: #004080;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  margin: 0.3rem;
+  font-weight: 600;
+}
+
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
